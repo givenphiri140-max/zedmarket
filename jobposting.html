@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jobposting.css">
+</head>
+
+
+<body>
+
+    <div class="container">
+
+          <nav>
+
+            <div class="TITLE">
+                <div class="title">ZM</div>
+                <h1>Zed-Market</h1>
+                <input type="text" placeholder="  search" class="search">
+             </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Market</a></li>
+                    <li class="active"><a href="jobposting.html">Job-Posting</a></li>
+                </ul>
+            </div>
+            <hr>
+        </nav>
+
+
+
+
+
+        <main class="jobs-page">
+
+            
+    <!-- HEADER -->
+    <div class="jobs-header">
+        <h2>Job Listings</h2>
+    </div>
+
+    <!-- JOB LIST -->
+    <div class="job-list">
+
+        <!-- JOB CARD -->
+        <div class="job-card">
+            <h3>Frontend Developer</h3>
+            <p class="company">ZedTech Solutions</p>
+            <p class="meta">📍 Lusaka · Full-time</p>
+            <p class="desc">
+                Looking for a frontend developer skilled in HTML, CSS and JavaScript.
+            </p>
+            <button class="apply-btn">Apply</button>
+        </div>
+
+        <div class="job-card">
+            <h3>Sales Representative</h3>
+            <p class="company">Zed Market Ltd</p>
+            <p class="meta">📍 Ndola · Part-time</p>
+            <p class="desc">
+                Sales representative needed for product marketing and customer outreach.
+            </p>
+            <button class="apply-btn">Apply</button>
+        </div>
+
+        <div class="job-card">
+            <h3>Frontend Developer</h3>
+            <p class="company">ZedTech Solutions</p>
+            <p class="meta">📍 Lusaka · Full-time</p>
+            <p class="desc">
+                Looking for a frontend developer skilled in HTML, CSS and JavaScript.
+            </p>
+            <button class="apply-btn">Apply</button>
+        </div>
+
+        
+        <div class="job-card">
+            <h3>Sales Representative</h3>
+            <p class="company">Zed Market Ltd</p>
+            <p class="meta">📍 Ndola · Part-time</p>
+            <p class="desc">
+                Sales representative needed for product marketing and customer outreach.
+            </p>
+            <button class="apply-btn">Apply</button>
+        </div>
+
+        
+        <div class="job-card">
+            <h3>Sales Representative</h3>
+            <p class="company">Zed Market Ltd</p>
+            <p class="meta">📍 Ndola · Part-time</p>
+            <p class="desc">
+                Sales representative needed for product marketing and customer outreach.
+            </p>
+            <button class="apply-btn">Apply</button>
+        </div>
+
+        
+        <div class="job-card">
+            <h3>Sales Representative</h3>
+            <p class="company">Zed Market Ltd</p>
+            <p class="meta">📍 Ndola · Part-time</p>
+            <p class="desc">
+                Sales representative needed for product marketing and customer outreach.
+            </p>
+            <button class="apply-btn">Apply</button>
+        </div>
+
+
+    </div>
+
+    <!-- JOB POST MODAL -->
+<div id="jobModal" class="post-modal">
+  <div class="post-box">
+    <h2>Create Job Post</h2>
+
+    <!-- JOB FORM -->
+    <div id="jobForm">
+      <input type="text" id="jobTitle" placeholder="Job Title">
+      <input type="text" id="jobCompany" placeholder="Company Name">
+      <input type="text" id="jobLocation" placeholder="Location">
+
+      <select id="jobType">
+        <option value="">Job Type</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Contract">Contract</option>
+      </select>
+
+      <textarea id="jobDesc" placeholder="Job Description"></textarea>
+      <input type="text" id="jobContact" placeholder="Contact Phone">
+      <input type="email" id="jobEmail" placeholder="Contact Email">
+
+      <div class="post-actions">
+        <button id="cancelJob">Cancel</button>
+        <button id="publishJob">Post Job</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</main>
+
+
+
+    
+
+<footer>
+    <hr color="grey">
+<ul>
+<li>
+<button id="homeBtn">
+<svg viewBox="0 0 24 22"><path d="M3 11.5L12 4l9 7.5V20h-6v-6H9v6H3z" stroke="currentColor" fill="none"/></svg>
+Home
+</button>
+</li>
+
+<li>
+<button id="messageBtn">
+<svg viewBox="0 0 24 22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14z" stroke="currentColor" fill="none"/></svg>
+Messages
+</button>
+</li>
+
+<li>
+<button>
+<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" fill="none"/></svg>
+Post
+</button>
+</li>
+
+<li>
+<button id="notifisBtn">
+<svg viewBox="0 0 24 22"><path d="M15 17h5l-2-2V11a6 6 0 1 0-12 0v4l-2 2h5" stroke="currentColor" fill="none"/></svg>
+Notifs
+</button>
+</li>
+
+<li>
+<button id="profileBtn">
+<svg viewBox="0 0 24 22"><path d="M12 12a5 5 0 1 0 0-10zM4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1" stroke="currentColor" fill="none"/></svg>
+Profile
+</button>
+</li>
+</ul>
+</footer>
+
+    </div>
+
+
+
+  </div>
+</div>
+    
+
+<script src="jobposting.js"></script>
+</body>
+</html>

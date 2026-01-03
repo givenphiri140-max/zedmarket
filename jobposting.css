@@ -1,0 +1,426 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+
+/* ================= JOB POSTING PAGE ================= */
+
+.jobs-page {
+    padding: 16px;
+    background: #f4f6f8;
+    min-height: calc(100vh - 140px);
+}
+
+/* ================= HEADER ================= */
+.jobs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 10px;
+}
+
+.jobs-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.post-job-btn {
+    background: #0b8a3e;
+    color: #fff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.post-job-btn:active {
+    transform: scale(0.98);
+}
+
+/* ================= JOB LIST ================= */
+.job-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ================= JOB CARD ================= */
+.job-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.job-card h3 {
+    font-size: 17px;
+    margin-bottom: 4px;
+    color: #111;
+}
+
+.company {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+.meta {
+    font-size: 13px;
+    color: #777;
+    margin: 6px 0;
+}
+
+.desc {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.45;
+    margin: 10px 0 14px;
+}
+
+.apply-btn {
+    width: 100%;
+    background: #05622a;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* ================= MODAL ================= */
+
+.post-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.post-modal.active {
+    display: flex;
+}
+
+/* ================= MODAL BOX ================= */
+.post-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.post-box h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+/* ================= FORM ================= */
+.post-box input,
+.post-box textarea,
+.post-box select {
+    width: 100%;
+    padding: 11px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    outline: none;
+}
+
+.post-box input:focus,
+.post-box textarea:focus,
+.post-box select:focus {
+    border-color: #0b8a3e;
+}
+
+.post-box textarea {
+    height: 90px;
+    resize: none;
+}
+
+/* ================= MODAL ACTIONS ================= */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.post-actions button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#cancelJob {
+    background: #e0e0e0;
+}
+
+#publishJob {
+    background: #0b8a3e;
+    color: white;
+}
+
+
+/* FOOTER */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+}
+
+footer ul{
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    padding:10px 0;
+}
+
+footer button{
+    background:none;
+    border:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    font-size:12px;
+    color:#555;
+    cursor:pointer;
+}
+
+footer svg{
+    width:22px;
+    height:22px;
+}
+
+
+
+nav{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 1200px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.TITLE{
+    display: flex;
+    align-items: center;
+    padding: 5px 50px;
+    
+}
+.title{
+    height: 50px;
+    width: 50px;
+    background: linear-gradient(135deg,green,orange);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.TITLE h1{
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+.search{
+    border-radius: 10px;
+    border: none;
+    margin-left: auto;
+    height: 20px;
+    background-color: rgb(150, 149, 149);
+    color: white;
+    padding-left: 10px;
+}
+
+
+
+.menu{
+    display: flex;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    
+}
+
+.menu ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.menu ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: -20%;
+    left: 0%;
+    background-color: orange;
+    height: 3px;
+    width: 0%;
+    transition: 0.5s;
+}
+
+.menu ul li a:hover::after{
+    width: 100%;
+}
+
+.container{
+    background-color: aqua;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    max-width: 1200px;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(56, 9, 9);
+}
+
+.jobs-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.job-card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#jobFormContainer {
+    position: fixed;
+    top: 80px; /* below nav */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 420px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+    display: none; /* hide initially */
+}
+
+
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width:600px){
+    .menu ul{
+        justify-content:space-around;
+    }
+}
+
+@media (max-width:400px){
+    main{
+        padding:50px;
+    }
+}
+
+
+@media(max-width:450px){
+    .TITLE{
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    
+}
+}
+
+@media(max-width:400px) {
+    .menu{
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+
+    .categories{
+        font-size: 1rem;
+    }
+}
+
+.menu .active a{
+    color: orange;
+}
+
+
+/* ================= NOTIFICATION BADGE ================= */
+#notifisBtn {
+    position: relative; /* required for ::after positioning */
+}
+
+#notifisBtn::after {
+    content: "3";                /* 🔔 number of notifications */
+    position: absolute;
+    top: -4px;
+    right: -6px;
+    min-width: 15px;
+    height: 18px;
+    padding: 0 3px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+
+
+
+
+
+/* ================= END OF JOB POSTING PAGE ================= */

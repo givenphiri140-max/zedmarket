@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+<div class="container">
+
+<nav>
+    <div class="TITLE">
+        <div class="title">ZM</div>
+        <h1>Zed-Market</h1>
+        <input type="text" placeholder="  search" class="search">
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li class="active"><a href="index.html">Market</a></li>
+            <li><a href="jobposting.html">Job-Posting</a></li>
+        </ul>
+    </div>
+    <hr>
+</nav>
+
+<main class="profile-main">
+
+    <section class="profile-header">
+        <div class="avatar">ZM</div>
+        <h2 id="profileName"></h2>
+        <p id="profilePhone"></p>
+        <p id="profileLocation"></p>
+    </section>
+
+    <hr>
+
+    <section class="profile-posts">
+        <h3>My Products</h3>
+        <div class="products" id="myProducts"></div>
+    </section>
+
+    <section class="profile-jobs">
+        <h3>My Jobs</h3>
+        <div class="job-list" id="myJobs"></div>
+    </section>
+
+
+    <!-- POST MODAL -->
+
+    <div id="postModal" class="post-modal">
+  <div class="post-box">
+
+    <h2>Create Post</h2>
+
+    <!-- TYPE SELECT -->
+    <select id="postType">
+      <option value="">Select Post Type</option>
+      <option value="product">Product</option>
+      <option value="job-posting">Job</option>
+    </select>
+
+    <!-- PRODUCT FORM -->
+    <div id="productForm" class="hidden">
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="number" id="productPrice" placeholder="Price">
+      <input type="text" id="productContact" placeholder="Contact Number">
+      <input type="file" id="productImage" accept="image/*">
+      <div class="post-actions">
+        <button id="cancelProduct">Cancel</button>
+        <button id="publishPost">Post Product</button>
+      </div>
+    </div>
+
+    <!-- JOB FORM -->
+    <div id="jobForm" class="hidden">
+      <input type="text" id="jobTitle" placeholder="Job Title">
+      <input type="text" id="jobCompany" placeholder="Company Name">
+      <input type="text" id="jobLocation" placeholder="Location">
+
+      <select id="jobType">
+        <option value="">Job Type</option>
+        <option value="Full-time">Full-time</option>
+        <option value="Part-time">Part-time</option>
+        <option value="Contract">Contract</option>
+      </select>
+
+      <textarea id="jobDesc" placeholder="Job Description"></textarea>
+      <input type="text" id="jobContact" placeholder="Contact Phone">
+      <input type="email" id="jobEmail" placeholder="Contact Email">
+
+      <div class="post-actions">
+        <button id="cancelJob">Cancel</button>
+        <button id="publishJob">Post Job</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+</div>
+
+
+</main>
+
+<footer>
+    <hr color="grey">
+    <ul>
+        <li>
+            <button id="homeBtn">
+                <svg viewBox="0 0 24 22"><path d="M3 11.5L12 4l9 7.5V20h-6v-6H9v6H3z" stroke="currentColor" fill="none"/></svg>
+                Home
+            </button>
+        </li>
+
+        <li>
+            <button id="messageBtn">
+                <svg viewBox="0 0 24 22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14z" stroke="currentColor" fill="none"/></svg>
+                Messages
+            </button>
+        </li>
+
+        <li>
+            <button>
+                <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" fill="none"/></svg>
+                Post
+            </button>
+        </li>
+
+        <li>
+            <button id="notifisBtn">
+                <svg viewBox="0 0 24 22"><path d="M15 17h5l-2-2V11a6 6 0 1 0-12 0v4l-2 2h5" stroke="currentColor" fill="none"/></svg>
+                Notifs
+            </button>
+        </li>
+
+        <li>
+            <button id="profileBtn">
+                <svg viewBox="0 0 24 22"><path d="M12 12a5 5 0 1 0 0-10zM4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1" stroke="currentColor" fill="none"/></svg>
+                Profile
+            </button>
+        </li>
+    </ul>
+</footer>
+
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

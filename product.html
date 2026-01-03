@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: antiquewhite;
+}
+
+/* ================= CONTAINER ================= */
+.container{
+    max-width:1200px;
+    margin:auto;
+    background:#f9f9f9;
+    min-height:100vh;
+    padding-bottom:90px; /* space for footer */
+}
+
+/* ================= NAV ================= */
+nav{
+    position:fixed;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:1200px;
+    background:white;
+    z-index:100;
+}
+
+.TITLE{
+    display:flex;
+    align-items:center;
+    padding:10px;
+}
+
+.title{
+    width:45px;
+    height:45px;
+    background:linear-gradient(135deg,green,orange);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    font-weight:bold;
+}
+
+.TITLE h1{
+    margin-left:10px;
+    font-size:18px;
+}
+
+.search{
+    margin-left:auto;
+    padding:5px 10px;
+    border:none;
+    border-radius:10px;
+    background:#999;
+    color:white;
+}
+
+/* MENU */
+.menu ul{
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    padding:10px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:black;
+}
+
+.menu .active a{
+    color:orange;
+}
+
+/* ================= MAIN ================= */
+main{
+    margin-top:120px;
+    padding:15px;
+}
+
+/* ================= PRODUCT BOX ================= */
+.product-box{
+    background:white;
+    border-radius:15px;
+    padding:15px;
+}
+
+/* IMAGE GALLERY */
+.gallery{
+    display:flex;
+    gap:10px;
+    overflow-x:auto;
+    margin-bottom:15px;
+}
+
+.gallery img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+/* PRODUCT INFO */
+h2{
+    margin:10px 0;
+    font-size:20px;
+}
+
+.price{
+    font-weight:bold;
+    font-size:18px;
+    color:green;
+}
+
+/* ACTION BUTTONS */
+.actions{
+    display:flex;
+    gap:10px;
+    margin:15px 0;
+}
+
+.actions button{
+    flex:1;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.call{
+    background:green;
+    color:white;
+}
+
+/* MESSAGE */
+textarea{
+    width:100%;
+    height:80px;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-top:5px;
+}
+
+.send{
+    margin-top:10px;
+    background:#333;
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* ================= OWNER CARD ================= */
+.owner-card{
+    display:flex;
+    gap:10px;
+    align-items:center;
+    background:white;
+    padding:12px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.owner-card img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.owner-card h4{
+    font-size:16px;
+}
+
+.owner-card p{
+    font-size:13px;
+    color:#555;
+}
+
+.owner-card button{
+    margin-top:5px;
+    padding:6px 12px;
+    border:none;
+    border-radius:8px;
+    background:orange;
+    color:white;
+    cursor:pointer;
+}
+
+/* ================= FOOTER ================= */
+footer{
+    position:fixed;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:1200px;
+    background:white;
+}
+
+footer ul{
+    display:flex;
+    justify-content:space-around;
+    list-style:none;
+    padding:10px 0;
+}
+
+footer button{
+    background:none;
+    border:none;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    font-size:12px;
+    color:#555;
+    cursor:pointer;
+}
+
+footer svg{
+    width:22px;
+    height:22px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:600px){
+    h2{
+        font-size:18px;
+    }
+
+    .gallery img{
+        width:140px;
+        height:140px;
+    }
+}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+    <div class="container">
+
+
+        <nav>
+
+            <div class="TITLE">
+                <div class="title">ZM</div>
+                <h1>Zed-Market</h1>
+                <input type="text" placeholder="  search" class="search">
+             </div>
+
+            <div class="menu">
+                <ul>
+                    <li class="active"><a href="index.html">Market</a></li>
+                    <li><a href="jobposting.html">Job-Posting</a></li>
+                </ul>
+            </div>
+            <hr>
+        </nav>
+
+
+        <main>
+
+                <div class="product-box">
+            <div class="gallery" id="gallery"></div>
+
+            <h2 id="title"></h2>
+            <p class="price" id="price"></p>
+
+            <div class="actions">
+                <button class="call" id="callBtn">📞 Call Supplier</button>
+            </div>
+
+            <h3>Message Supplier</h3>
+            <textarea id="messageInput" placeholder="Write your message..."></textarea>
+            <button class="send" id="sendMsgBtn">Send Message</button>
+        </div>
+    
+
+<footer>
+    <hr color="grey">
+<ul>
+<li>
+<button id="homeBtn">
+<svg viewBox="0 0 24 22"><path d="M3 11.5L12 4l9 7.5V20h-6v-6H9v6H3z" stroke="currentColor" fill="none"/></svg>
+Home
+</button>
+</li>
+
+<li>
+<button>
+<svg viewBox="0 0 24 22"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14z" stroke="currentColor" fill="none"/></svg>
+Messages
+</button>
+</li>
+
+<li>
+<button>
+<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" stroke="currentColor" fill="none"/></svg>
+Post
+</button>
+</li>
+
+<li>
+<button>
+<svg viewBox="0 0 24 22"><path d="M15 17h5l-2-2V11a6 6 0 1 0-12 0v4l-2 2h5" stroke="currentColor" fill="none"/></svg>
+Notifs
+</button>
+</li>
+
+<li>
+<button id="profileBtn">
+<svg viewBox="0 0 24 22"><path d="M12 12a5 5 0 1 0 0-10zM4 21v-1a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v1" stroke="currentColor" fill="none"/></svg>
+Profile
+</button>
+</li>
+</ul>
+</footer>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+let imageDB;
+
+const request = indexedDB.open("zedImagesDB", 1);
+
+request.onupgradeneeded = e => {
+    const db = e.target.result;
+    if (!db.objectStoreNames.contains("images")) {
+        db.createObjectStore("images", { keyPath: "id" });
+    }
+};
+
+request.onsuccess = e => {
+    imageDB = e.target.result;
+    loadProductImage(); // load image after DB is ready
+};
+
+function loadImageFromDB(id, callback) {
+    const tx = imageDB.transaction("images", "readonly");
+    const store = tx.objectStore("images");
+    const req = store.get(id);
+
+    req.onsuccess = () => {
+        if (!req.result) return callback(null);
+        callback(URL.createObjectURL(req.result.blob));
+    };
+}
+
+
+// === Load Product Data ===
+const product = JSON.parse(localStorage.getItem("selectedProduct")) || {};
+
+// Product Title & Price
+document.getElementById("title").textContent = product.title || "Product Name";
+document.getElementById("price").textContent = "K" + (product.price || "0.00");
+
+// Product Gallery
+const gallery = document.getElementById("gallery");
+
+function loadProductImage() {
+    if (!product.id) return;
+
+    loadImageFromDB(product.id, url => {
+        if (!url) return;
+
+        const img = document.createElement("img");
+        img.src = url;
+        gallery.appendChild(img);
+    });
+}
+
+// Call Supplier Button
+document.getElementById("callBtn").onclick = () => {
+    if (product.phone) {
+        window.location.href = `tel:${product.phone}`;
+    } else {
+        alert("Phone number not available");
+    }
+};
+
+// Send Message Button
+document.getElementById("sendMsgBtn").onclick = () => {
+    const msg = document.getElementById("messageInput").value;
+    if (msg) {
+        alert(`Message sent: ${msg}`);
+        document.getElementById("messageInput").value = "";
+    } else {
+        alert("Please write a message");
+    }
+};
+
+// === Load Owner Data ===
+const owner = JSON.parse(localStorage.getItem("zedUser")) || {};
+document.getElementById("ownerAvatar").src = owner.avatar || "imgs/profile.png";
+document.getElementById("ownerName").textContent = owner.name || "Store Name";
+document.getElementById("ownerLocation").textContent =
+    "📍 " + (owner.location || "Unknown");
+
+// View Profile Button
+document.getElementById("profileBtn").onclick = () => {
+    localStorage.setItem("viewedProfile", owner.id);
+    window.location.href = "profile.html";
+};
+
+document.getElementById("homeBtn").onclick = () => {
+    window.location.href = "index.html";
+};
+
+
+
+</script>
+
+</body>
+</html>
